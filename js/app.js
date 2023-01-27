@@ -52,11 +52,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  //call sum(); and extract the number from the result
+  let sum1Ans = sum(a,b);
+  let sum2Ans = sum1Ans[0];
 
+  let multiply2Ans = multiply(a, b);
+  let multiply3Ans = multiply2Ans[0];
+
+  let sumNo = sum(sum2Ans, c);
+  let productNo = multiply(multiply3Ans, c);
+  let msg3 = `${a} and ${b} and ${c} sum to ${sumNo[0]}.`;
+  let msg4 = `The product of ${a} and ${b} and ${c} is ${productNo[0]}.`;
+  return [sumNo[0], productNo[0], msg3, msg4];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
